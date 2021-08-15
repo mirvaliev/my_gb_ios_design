@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574326C82AE3000C29EB /* MyGroupViewController.swift */; };
+		FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574626C82B7A000C29EB /* AllGroupViewController.swift */; };
+		FA96574A26C82D18000C29EB /* SetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574926C82D18000C29EB /* SetingsViewController.swift */; };
+		FA96574D26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574C26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift */; };
+		FA96574F26C8D18C000C29EB /* MyGroupCollactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574E26C8D18C000C29EB /* MyGroupCollactionViewController.swift */; };
+		FA96575126C8D1F4000C29EB /* AllGroupCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */; };
+		FA96575426C8D3A0000C29EB /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */; };
+		FA96575826C8D74E000C29EB /* AllGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */; };
 		FABE007B26BDB3CF003E8F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007A26BDB3CF003E8F24 /* AppDelegate.swift */; };
 		FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007C26BDB3CF003E8F24 /* SceneDelegate.swift */; };
 		FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007E26BDB3CF003E8F24 /* ViewController.swift */; };
@@ -17,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA96574326C82AE3000C29EB /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
+		FA96574626C82B7A000C29EB /* AllGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewController.swift; sourceTree = "<group>"; };
+		FA96574926C82D18000C29EB /* SetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetingsViewController.swift; sourceTree = "<group>"; };
+		FA96574C26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetingsTableViewCelTableViewCell.swift; sourceTree = "<group>"; };
+		FA96574E26C8D18C000C29EB /* MyGroupCollactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCollactionViewController.swift; sourceTree = "<group>"; };
+		FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCollectionViewController.swift; sourceTree = "<group>"; };
+		FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
+		FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewCell.swift; sourceTree = "<group>"; };
 		FABE007726BDB3CF003E8F24 /* mySun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE007A26BDB3CF003E8F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABE007C26BDB3CF003E8F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +55,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA85FADD26C589C8006E3D59 /* AllGroup */ = {
+			isa = PBXGroup;
+			children = (
+				FA96575626C8D718000C29EB /* CellAllGroup */,
+				FA96574526C82B58000C29EB /* Conroller */,
+			);
+			path = AllGroup;
+			sourceTree = "<group>";
+		};
+		FA85FADE26C589E4006E3D59 /* MyGroup */ = {
+			isa = PBXGroup;
+			children = (
+				FA96575226C8D2C9000C29EB /* CellMyGroup */,
+				FA96574226C82A8A000C29EB /* Controller */,
+			);
+			path = MyGroup;
+			sourceTree = "<group>";
+		};
+		FA96574126C829FA000C29EB /* Setings */ = {
+			isa = PBXGroup;
+			children = (
+				FA96574B26C83045000C29EB /* CellSetings */,
+				FA96574826C82CF9000C29EB /* Controller */,
+			);
+			path = Setings;
+			sourceTree = "<group>";
+		};
+		FA96574226C82A8A000C29EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA96574326C82AE3000C29EB /* MyGroupViewController.swift */,
+				FA96574E26C8D18C000C29EB /* MyGroupCollactionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA96574526C82B58000C29EB /* Conroller */ = {
+			isa = PBXGroup;
+			children = (
+				FA96574626C82B7A000C29EB /* AllGroupViewController.swift */,
+				FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */,
+			);
+			path = Conroller;
+			sourceTree = "<group>";
+		};
+		FA96574826C82CF9000C29EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA96574926C82D18000C29EB /* SetingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA96574B26C83045000C29EB /* CellSetings */ = {
+			isa = PBXGroup;
+			children = (
+				FA96574C26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift */,
+			);
+			path = CellSetings;
+			sourceTree = "<group>";
+		};
+		FA96575226C8D2C9000C29EB /* CellMyGroup */ = {
+			isa = PBXGroup;
+			children = (
+				FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */,
+			);
+			path = CellMyGroup;
+			sourceTree = "<group>";
+		};
+		FA96575626C8D718000C29EB /* CellAllGroup */ = {
+			isa = PBXGroup;
+			children = (
+				FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */,
+			);
+			path = CellAllGroup;
+			sourceTree = "<group>";
+		};
 		FABE006E26BDB3CF003E8F24 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +182,9 @@
 		FABE009026BE0E61003E8F24 /* CodeFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FA96574126C829FA000C29EB /* Setings */,
+				FA85FADE26C589E4006E3D59 /* MyGroup */,
+				FA85FADD26C589C8006E3D59 /* AllGroup */,
 				FABE009126BE0E9D003E8F24 /* LoginForm */,
 			);
 			path = CodeFiles;
@@ -172,9 +268,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA96574D26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift in Sources */,
 				FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */,
 				FABE007B26BDB3CF003E8F24 /* AppDelegate.swift in Sources */,
+				FA96575426C8D3A0000C29EB /* MyGroupTableViewCell.swift in Sources */,
+				FA96574A26C82D18000C29EB /* SetingsViewController.swift in Sources */,
+				FA96575126C8D1F4000C29EB /* AllGroupCollectionViewController.swift in Sources */,
+				FA96574F26C8D18C000C29EB /* MyGroupCollactionViewController.swift in Sources */,
+				FA96575826C8D74E000C29EB /* AllGroupTableViewCell.swift in Sources */,
+				FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */,
 				FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */,
+				FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */,
 				FABE009326BE0ECF003E8F24 /* LoginForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

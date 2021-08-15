@@ -22,10 +22,11 @@ final class LoginFormVievController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.isSecureTextEntry = true // делаем из TextField парольный ввод
         // отключаем эфект размытия в начале
         efectView = visualEffectView.effect
         visualEffectView.effect = nil
-        popUPView.layer.cornerRadius = 20 // скругление краёв у UIView
+        popUPView.layer.cornerRadius = 30 // скругление краёв у UIView
         // Добавляем жесть нажатия
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         // испльзуем его на UIScrollView
@@ -47,16 +48,42 @@ final class LoginFormVievController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction private func loginButtonAction(_ sender: UIButton) {
-        let login = loginTextField.text
-        let pass = passwordTextField.text
-        if login == "Veronika" && pass == "veronika" {
-            // тедо подрузумевает переход в другое окно
-            return
-        } else { animationInUIViewPopUp() }
+    // Метод оброботки пароля и логина
+    // Данный метод отвечает за выполнение той или иноого segue согласно segueID
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "dataIsCorrect" {
+            let login = loginTextField.text
+            let pass = passwordTextField.text
+            if login == "V" && pass == "v" { return true }
+            else {
+                animationInUIViewPopUp()
+                return false
+            }
+        } else {
+            return true
+        }
     }
     
-    @IBAction func returButtonAction(_ sender: UIButton) { animationOutUIViewPopUp() }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "demo" {
+            let destinationControoller = segue.destination as! UITabBarController
+            destinationControoller.viewControllers?.forEach { $0.view.backgroundColor = .red }
+        }
+    }
+    
+    @IBAction func logaut(_ segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction private func loginButtonAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func demoButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func returnLoginForm(_ sender: UIButton) { animationOutUIViewPopUp() }
     
     //ДЛЯ СКРОЛИНГА
     // Когда клавиатура появляется
@@ -111,6 +138,5 @@ final class LoginFormVievController: UIViewController {
         } completion: { (sucses: Bool) in
             self.popUPView.removeFromSuperview() // убираем с основного экрана
         }
-
     }
 }
