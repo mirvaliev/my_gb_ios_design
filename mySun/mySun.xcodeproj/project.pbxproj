@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA934D0E26CC16CF000B75C3 /* GroupPhotoColection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA934D0D26CC16CF000B75C3 /* GroupPhotoColection.swift */; };
 		FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574326C82AE3000C29EB /* MyGroupViewController.swift */; };
 		FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574626C82B7A000C29EB /* AllGroupViewController.swift */; };
 		FA96574A26C82D18000C29EB /* SetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574926C82D18000C29EB /* SetingsViewController.swift */; };
@@ -15,6 +16,8 @@
 		FA96575126C8D1F4000C29EB /* AllGroupCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */; };
 		FA96575426C8D3A0000C29EB /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */; };
 		FA96575826C8D74E000C29EB /* AllGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */; };
+		FAA4886226CAD97100546521 /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4886126CAD97100546521 /* GroupsModel.swift */; };
+		FAA4886426CADA5200546521 /* GroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4886326CADA5200546521 /* GroupData.swift */; };
 		FABE007B26BDB3CF003E8F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007A26BDB3CF003E8F24 /* AppDelegate.swift */; };
 		FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007C26BDB3CF003E8F24 /* SceneDelegate.swift */; };
 		FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007E26BDB3CF003E8F24 /* ViewController.swift */; };
@@ -22,9 +25,11 @@
 		FABE008426BDB3D0003E8F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABE008326BDB3D0003E8F24 /* Assets.xcassets */; };
 		FABE008726BDB3D0003E8F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABE008526BDB3D0003E8F24 /* LaunchScreen.storyboard */; };
 		FABE009326BE0ECF003E8F24 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE009226BE0ECF003E8F24 /* LoginForm.swift */; };
+		FAF8199626CD853100B5F183 /* MyGroupCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA934D0D26CC16CF000B75C3 /* GroupPhotoColection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPhotoColection.swift; sourceTree = "<group>"; };
 		FA96574326C82AE3000C29EB /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
 		FA96574626C82B7A000C29EB /* AllGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewController.swift; sourceTree = "<group>"; };
 		FA96574926C82D18000C29EB /* SetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetingsViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +38,8 @@
 		FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCollectionViewController.swift; sourceTree = "<group>"; };
 		FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewCell.swift; sourceTree = "<group>"; };
+		FAA4886126CAD97100546521 /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
+		FAA4886326CADA5200546521 /* GroupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupData.swift; sourceTree = "<group>"; };
 		FABE007726BDB3CF003E8F24 /* mySun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE007A26BDB3CF003E8F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABE007C26BDB3CF003E8F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		FABE008626BDB3D0003E8F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABE008826BDB3D0003E8F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABE009226BE0ECF003E8F24 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */,
+				FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */,
 			);
 			path = CellMyGroup;
 			sourceTree = "<group>";
@@ -130,6 +139,16 @@
 				FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */,
 			);
 			path = CellAllGroup;
+			sourceTree = "<group>";
+		};
+		FAA4886026CAD92A00546521 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				FAA4886126CAD97100546521 /* GroupsModel.swift */,
+				FAA4886326CADA5200546521 /* GroupData.swift */,
+				FA934D0D26CC16CF000B75C3 /* GroupPhotoColection.swift */,
+			);
+			path = Repo;
 			sourceTree = "<group>";
 		};
 		FABE006E26BDB3CF003E8F24 = {
@@ -151,6 +170,7 @@
 		FABE007926BDB3CF003E8F24 /* mySun */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4886026CAD92A00546521 /* Repo */,
 				FABE009026BE0E61003E8F24 /* CodeFiles */,
 				FABE008E26BDCBFB003E8F24 /* AppDiligate */,
 				FABE008F26BDCF88003E8F24 /* Test */,
@@ -268,9 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA934D0E26CC16CF000B75C3 /* GroupPhotoColection.swift in Sources */,
 				FA96574D26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift in Sources */,
 				FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */,
 				FABE007B26BDB3CF003E8F24 /* AppDelegate.swift in Sources */,
+				FAA4886426CADA5200546521 /* GroupData.swift in Sources */,
+				FAF8199626CD853100B5F183 /* MyGroupCollectionCell.swift in Sources */,
 				FA96575426C8D3A0000C29EB /* MyGroupTableViewCell.swift in Sources */,
 				FA96574A26C82D18000C29EB /* SetingsViewController.swift in Sources */,
 				FA96575126C8D1F4000C29EB /* AllGroupCollectionViewController.swift in Sources */,
@@ -279,6 +302,7 @@
 				FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */,
 				FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */,
 				FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */,
+				FAA4886226CAD97100546521 /* GroupsModel.swift in Sources */,
 				FABE009326BE0ECF003E8F24 /* LoginForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
