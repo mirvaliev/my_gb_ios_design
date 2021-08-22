@@ -25,9 +25,15 @@ class MyGroupViewController: UIViewController {
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToViewSelectionGroupSegue" {
-            let distanationVC = segue.destination
-            guard let indexAllGroupCell = myGroupTableView.indexPathForSelectedRow?.row else { return }
-            distanationVC.title = myGroupArray[indexAllGroupCell].groupName
+            
+            guard
+                let distanationVC = segue.destination as? MyGroupCollactionViewController,
+                let indexAllGroupCell = myGroupTableView.indexPathForSelectedRow?.row
+            else { return }
+            
+            let selectGroup = myGroupArray[indexAllGroupCell]
+            distanationVC.title = selectGroup.groupName
+            distanationVC.myGroupPhoto = selectGroup.groupPhoto
         }
     }
     
@@ -68,21 +74,21 @@ extension MyGroupViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = deleteAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [deleteAction])
+        let deleteGroupAction = deleteGroupAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [deleteGroupAction])
     }
     
-    func deleteAction (at indexPath: IndexPath) -> UIContextualAction {
-        let actionDel = UIContextualAction(style: .destructive, title: "Удаление") { actionDel, view, complaction in
+    func deleteGroupAction (at indexPath: IndexPath) -> UIContextualAction {
+        let actionDelGroup = UIContextualAction(style: .destructive, title: nil) { actionDel, view, complaction in
             //удаляем группу из масива
             self.myGroupArray.remove(at: indexPath.row)
             // удаляем строку из таблицы
             self.myGroupTableView.deleteRows(at: [indexPath], with: .fade)
         }
         
-        actionDel.backgroundColor = .red
-        actionDel.image = UIImage(systemName: "trash.fill")
-        return actionDel
+        actionDelGroup.backgroundColor = .red
+        actionDelGroup.image = UIImage(systemName: "trash.fill")
+        return actionDelGroup
     }
 }
 

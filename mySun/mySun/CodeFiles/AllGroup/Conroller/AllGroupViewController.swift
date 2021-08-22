@@ -11,6 +11,8 @@ class AllGroupViewController: UIViewController {
     
     @IBOutlet var allGroupTableView: UITableView!
     
+    
+    
     let allGroupData: GroupData = GroupData()
     var allGroupArray: [GroupsModel] = []
         
@@ -21,6 +23,8 @@ class AllGroupViewController: UIViewController {
         
         allGroupTableView.delegate = self
         allGroupTableView.dataSource = self
+        
+        
     }
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -11,11 +11,27 @@ class MyGroupViewController: UIViewController {
 
     @IBOutlet private var myGroupTableView: UITableView!
     
+    
+    
+    @IBOutlet var yaProfileImage: UIView!
+    
+    
+    
+    
     let myGroupData: GroupData = GroupData()
     var myGroupArray: [GroupsModel] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Делаем аватарку круглой формы
+        yaProfileImage.layer.cornerRadius = 30
+        yaProfileImage.layer.backgroundColor = UIColor.clear.cgColor
+        yaProfileImage.clipsToBounds = true
+        
+        // Помещаем аватарку в рамку
+        yaProfileImage.layer.borderColor = UIColor.white.cgColor
+        yaProfileImage.layer.borderWidth = 5
         
         myGroupArray = myGroupData.myGroup
         
@@ -34,7 +50,12 @@ class MyGroupViewController: UIViewController {
             let selectGroup = myGroupArray[indexAllGroupCell]
             distanationVC.title = selectGroup.groupName
             distanationVC.myGroupPhoto = selectGroup.groupPhoto
+        } else if segue.identifier == "ToPhotoVc" {
+            let photoVC = segue.destination as! MyGroupCollactionViewController
+            guard let index = myGroupTableView.indexPathForSelectedRow else { return }
+            photoVC.myGroupPhoto = myGroupArray[index.row].groupPhoto
         }
+        
     }
     
     @IBAction func addGroupsInMyGroups (_ segue: UIStoryboardSegue) {
