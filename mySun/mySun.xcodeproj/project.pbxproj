@@ -10,17 +10,16 @@
 		FA934D0E26CC16CF000B75C3 /* GroupPhotoColection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA934D0D26CC16CF000B75C3 /* GroupPhotoColection.swift */; };
 		FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574326C82AE3000C29EB /* MyGroupViewController.swift */; };
 		FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574626C82B7A000C29EB /* AllGroupViewController.swift */; };
-		FA96574A26C82D18000C29EB /* SetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574926C82D18000C29EB /* SetingsViewController.swift */; };
-		FA96574D26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574C26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift */; };
-		FA96574F26C8D18C000C29EB /* MyGroupCollactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96574E26C8D18C000C29EB /* MyGroupCollactionViewController.swift */; };
 		FA96575126C8D1F4000C29EB /* AllGroupCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */; };
 		FA96575426C8D3A0000C29EB /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */; };
 		FA96575826C8D74E000C29EB /* AllGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */; };
 		FAA4886226CAD97100546521 /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4886126CAD97100546521 /* GroupsModel.swift */; };
 		FAA4886426CADA5200546521 /* GroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4886326CADA5200546521 /* GroupData.swift */; };
+		FAAB41A626E0F6E800EEE71C /* AboutPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB41A526E0F6E800EEE71C /* AboutPhotoViewController.swift */; };
 		FAB9F3A626D17B9E0038B9E9 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3A526D17B9E0038B9E9 /* ProfilesViewController.swift */; };
 		FAB9F3A826D2B0A00038B9E9 /* LogoAllGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3A726D2B0A00038B9E9 /* LogoAllGroups.swift */; };
 		FAB9F3AA26D2BA170038B9E9 /* LogoMyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3A926D2BA170038B9E9 /* LogoMyGroup.swift */; };
+		FAB9F3AC26DA27B30038B9E9 /* MyGroupCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3AB26DA27B30038B9E9 /* MyGroupCollectionViewController.swift */; };
 		FABE007B26BDB3CF003E8F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007A26BDB3CF003E8F24 /* AppDelegate.swift */; };
 		FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007C26BDB3CF003E8F24 /* SceneDelegate.swift */; };
 		FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE007E26BDB3CF003E8F24 /* ViewController.swift */; };
@@ -28,6 +27,7 @@
 		FABE008426BDB3D0003E8F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABE008326BDB3D0003E8F24 /* Assets.xcassets */; };
 		FABE008726BDB3D0003E8F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABE008526BDB3D0003E8F24 /* LaunchScreen.storyboard */; };
 		FABE009326BE0ECF003E8F24 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE009226BE0ECF003E8F24 /* LoginForm.swift */; };
+		FAC8604426DA874E00B0B269 /* PhotoLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8604326DA874E00B0B269 /* PhotoLikeViewController.swift */; };
 		FAF8199626CD853100B5F183 /* MyGroupCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,17 +35,16 @@
 		FA934D0D26CC16CF000B75C3 /* GroupPhotoColection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPhotoColection.swift; sourceTree = "<group>"; };
 		FA96574326C82AE3000C29EB /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
 		FA96574626C82B7A000C29EB /* AllGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewController.swift; sourceTree = "<group>"; };
-		FA96574926C82D18000C29EB /* SetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetingsViewController.swift; sourceTree = "<group>"; };
-		FA96574C26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetingsTableViewCelTableViewCell.swift; sourceTree = "<group>"; };
-		FA96574E26C8D18C000C29EB /* MyGroupCollactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCollactionViewController.swift; sourceTree = "<group>"; };
 		FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCollectionViewController.swift; sourceTree = "<group>"; };
 		FA96575326C8D3A0000C29EB /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		FA96575726C8D74E000C29EB /* AllGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewCell.swift; sourceTree = "<group>"; };
 		FAA4886126CAD97100546521 /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
 		FAA4886326CADA5200546521 /* GroupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupData.swift; sourceTree = "<group>"; };
+		FAAB41A526E0F6E800EEE71C /* AboutPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPhotoViewController.swift; sourceTree = "<group>"; };
 		FAB9F3A526D17B9E0038B9E9 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		FAB9F3A726D2B0A00038B9E9 /* LogoAllGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAllGroups.swift; sourceTree = "<group>"; };
 		FAB9F3A926D2BA170038B9E9 /* LogoMyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoMyGroup.swift; sourceTree = "<group>"; };
+		FAB9F3AB26DA27B30038B9E9 /* MyGroupCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCollectionViewController.swift; sourceTree = "<group>"; };
 		FABE007726BDB3CF003E8F24 /* mySun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE007A26BDB3CF003E8F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABE007C26BDB3CF003E8F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		FABE008626BDB3D0003E8F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABE008826BDB3D0003E8F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABE009226BE0ECF003E8F24 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		FAC8604326DA874E00B0B269 /* PhotoLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLikeViewController.swift; sourceTree = "<group>"; };
 		FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,20 +87,13 @@
 			path = MyGroup;
 			sourceTree = "<group>";
 		};
-		FA96574126C829FA000C29EB /* Setings */ = {
-			isa = PBXGroup;
-			children = (
-				FA96574B26C83045000C29EB /* CellSetings */,
-				FA96574826C82CF9000C29EB /* Controller */,
-			);
-			path = Setings;
-			sourceTree = "<group>";
-		};
 		FA96574226C82A8A000C29EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FA96574326C82AE3000C29EB /* MyGroupViewController.swift */,
-				FA96574E26C8D18C000C29EB /* MyGroupCollactionViewController.swift */,
+				FAB9F3AB26DA27B30038B9E9 /* MyGroupCollectionViewController.swift */,
+				FAC8604326DA874E00B0B269 /* PhotoLikeViewController.swift */,
+				FAAB41A526E0F6E800EEE71C /* AboutPhotoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,22 +105,6 @@
 				FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */,
 			);
 			path = Conroller;
-			sourceTree = "<group>";
-		};
-		FA96574826C82CF9000C29EB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FA96574926C82D18000C29EB /* SetingsViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FA96574B26C83045000C29EB /* CellSetings */ = {
-			isa = PBXGroup;
-			children = (
-				FA96574C26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift */,
-			);
-			path = CellSetings;
 			sourceTree = "<group>";
 		};
 		FA96575226C8D2C9000C29EB /* CellMyGroup */ = {
@@ -219,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				FAB9F3A426D17B610038B9E9 /* Profiles */,
-				FA96574126C829FA000C29EB /* Setings */,
 				FA85FADE26C589E4006E3D59 /* MyGroup */,
 				FA85FADD26C589C8006E3D59 /* AllGroup */,
 				FABE009126BE0E9D003E8F24 /* LoginForm */,
@@ -307,7 +283,6 @@
 			files = (
 				FAB9F3AA26D2BA170038B9E9 /* LogoMyGroup.swift in Sources */,
 				FA934D0E26CC16CF000B75C3 /* GroupPhotoColection.swift in Sources */,
-				FA96574D26C830A2000C29EB /* SetingsTableViewCelTableViewCell.swift in Sources */,
 				FAB9F3A826D2B0A00038B9E9 /* LogoAllGroups.swift in Sources */,
 				FAB9F3A626D17B9E0038B9E9 /* ProfilesViewController.swift in Sources */,
 				FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */,
@@ -315,14 +290,15 @@
 				FAA4886426CADA5200546521 /* GroupData.swift in Sources */,
 				FAF8199626CD853100B5F183 /* MyGroupCollectionCell.swift in Sources */,
 				FA96575426C8D3A0000C29EB /* MyGroupTableViewCell.swift in Sources */,
-				FA96574A26C82D18000C29EB /* SetingsViewController.swift in Sources */,
 				FA96575126C8D1F4000C29EB /* AllGroupCollectionViewController.swift in Sources */,
-				FA96574F26C8D18C000C29EB /* MyGroupCollactionViewController.swift in Sources */,
+				FAAB41A626E0F6E800EEE71C /* AboutPhotoViewController.swift in Sources */,
 				FA96575826C8D74E000C29EB /* AllGroupTableViewCell.swift in Sources */,
 				FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */,
 				FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */,
 				FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */,
 				FAA4886226CAD97100546521 /* GroupsModel.swift in Sources */,
+				FAB9F3AC26DA27B30038B9E9 /* MyGroupCollectionViewController.swift in Sources */,
+				FAC8604426DA874E00B0B269 /* PhotoLikeViewController.swift in Sources */,
 				FABE009326BE0ECF003E8F24 /* LoginForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

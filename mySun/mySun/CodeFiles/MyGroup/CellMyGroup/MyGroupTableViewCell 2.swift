@@ -8,7 +8,6 @@
 import UIKit
 
 class MyGroupTableViewCell: UITableViewCell {
-
     static let indetifarMyGroup = "MyGroupTableViewCell"
     
     @IBOutlet var myAvatatarLogoImageView: UIImageView!

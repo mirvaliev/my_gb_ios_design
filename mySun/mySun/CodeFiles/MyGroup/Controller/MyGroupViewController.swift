@@ -9,41 +9,50 @@ import UIKit
 
 class MyGroupViewController: UIViewController {
 
-    @IBOutlet private var myGroupTableView: UITableView!
+    @IBOutlet var myGroupTableView: UITableView!
+    
+    private let myGroupData: GroupData = GroupData()
+    private var myGroupArray: [GroupsModel] = []
+    private var filterMyGroup: [GroupsModel] = []
     
     
+    private var searchBarIsEmpty: Bool {
+        guard let searchText = searchController.searchBar.text else { return false }
+        return searchText.isEmpty
+    }
     
-    @IBOutlet var yaProfileImage: UIView!
+    private var isFiltging: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
     
-    
-    
-    
-    let myGroupData: GroupData = GroupData()
-    var myGroupArray: [GroupsModel] = []
+    // отображать результат поиска в том же View что и основной контент
+    private let searchController = UISearchController(searchResultsController: nil)
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Делаем аватарку круглой формы
-        yaProfileImage.layer.cornerRadius = 30
-        yaProfileImage.layer.backgroundColor = UIColor.clear.cgColor
-        yaProfileImage.clipsToBounds = true
-        
-        // Помещаем аватарку в рамку
-        yaProfileImage.layer.borderColor = UIColor.white.cgColor
-        yaProfileImage.layer.borderWidth = 5
-        
-        myGroupArray = myGroupData.myGroup
-        
         myGroupTableView.delegate = self
         myGroupTableView.dataSource = self
+        myGroupArray = myGroupData.myGroup
+        
+        // настройка searchConroller
+        searchController.searchResultsUpdater = self // получателем информации об изменеени текстов в поисковой строке является наш класс
+        searchController.obscuresBackgroundDuringPresentation = false // что бы работь с поисковым контентом как с основным
+        searchController.searchBar.placeholder = "Поиск ..." // пользовательское название
+        
+        navigationItem.searchController = searchController // отображаем строку поиска на NavigationBar
+        definesPresentationContext = true // опускаем строку поиска при переходе на другой экран
+
     }
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToViewSelectionGroupSegue" {
-            
+            if let indexPath = myGroupTableView.indexPathForSelectedRow {
+                let myGroups: GroupsModel
+                if isFiltging { myGroups = filterMyGroup[indexPath.row] } else { myGroups = myGroupArray[indexPath.row] }
+            }
             guard
-                let distanationVC = segue.destination as? MyGroupCollactionViewController,
+                let distanationVC = segue.destination as? MyGroupCollectionViewController,
                 let indexAllGroupCell = myGroupTableView.indexPathForSelectedRow?.row
             else { return }
             
@@ -51,7 +60,7 @@ class MyGroupViewController: UIViewController {
             distanationVC.title = selectGroup.groupName
             distanationVC.myGroupPhoto = selectGroup.groupPhoto
         } else if segue.identifier == "ToPhotoVc" {
-            let photoVC = segue.destination as! MyGroupCollactionViewController
+            let photoVC = segue.destination as! MyGroupCollectionViewController
             guard let index = myGroupTableView.indexPathForSelectedRow else { return }
             photoVC.myGroupPhoto = myGroupArray[index.row].groupPhoto
         }
@@ -79,18 +88,22 @@ class MyGroupViewController: UIViewController {
 
 extension MyGroupViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        myGroupArray.count // скоолько секций в таблице
+        if isFiltging { return filterMyGroup.count } else { return myGroupArray.count }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myGroupCell = tableView.dequeueReusableCell(withIdentifier: MyGroupTableViewCell.indetifarMyGroup) as! MyGroupTableViewCell
         
+        // активация строки поиска
+        var myGroup: GroupsModel
+        
+        if isFiltging { myGroup = filterMyGroup[indexPath.row] } else { myGroup = myGroupArray[indexPath.row] }
+        
+        let myGroupCell = tableView.dequeueReusableCell(withIdentifier: MyGroupTableViewCell.indetifarMyGroup) as! MyGroupTableViewCell
         myGroupCell.configureMyGroup(groups: myGroupArray[indexPath.row])
         return myGroupCell
     }
         
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // если была нажата кнопка удалить
         
     }
     
@@ -113,3 +126,16 @@ extension MyGroupViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension MyGroupViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+    
+    private func filterContentForSearchText (searchText: String) {
+        filterMyGroup = myGroupArray.filter({ (filer: GroupsModel) -> Bool in
+            return filer.groupName.lowercased().contains(searchText.lowercased())
+        })
+        
+        myGroupTableView.reloadData()
+    }
+}

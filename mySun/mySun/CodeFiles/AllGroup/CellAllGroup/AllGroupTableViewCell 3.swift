@@ -13,6 +13,7 @@ class AllGroupTableViewCell: UITableViewCell {
     
     @IBOutlet private var avatarLogoImagesView: UIImageView!
     @IBOutlet private var lableGroupName: UILabel!
+   
     
     func configureAllGroup (groups: GroupsModel) {
         avatarLogoImagesView.image = UIImage(named: groups.groupLogo)
