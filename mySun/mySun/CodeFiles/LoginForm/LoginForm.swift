@@ -9,6 +9,13 @@ import UIKit
 import Foundation
 
 final class LoginFormVievController: UIViewController {
+    
+    private var splashImageView: UIImageView = {
+        let splashImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+        splashImageView.image = UIImage(named: "VK.com-logo.svg")
+        return splashImageView
+    }()
+    
     @IBOutlet var visualEffectView: UIVisualEffectView!
     @IBOutlet weak var popUPView: UIView!
     @IBOutlet weak var popUpLabel: UILabel!
@@ -20,9 +27,11 @@ final class LoginFormVievController: UIViewController {
     @IBOutlet private var scrolViewOnForm: UIScrollView!
     var efectView: UIVisualEffect!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordTextField.isSecureTextEntry = true // делаем из TextField парольный ввод
+        passwordTextField.isSecureTextEntry = true
         // отключаем эфект размытия в начале
         efectView = visualEffectView.effect
         visualEffectView.effect = nil
@@ -31,7 +40,20 @@ final class LoginFormVievController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         // испльзуем его на UIScrollView
         scrolViewOnForm?.addGestureRecognizer(tap)
+        view.addSubview(splashImageView)
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        splashImageView.center = view.center
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.animatedVkLogo()
+        }
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -138,5 +160,25 @@ final class LoginFormVievController: UIViewController {
         } completion: { (sucses: Bool) in
             self.popUPView.removeFromSuperview() // убираем с основного экрана
         }
+    }
+    
+    private func animatedVkLogo() {
+        UIView.animate(withDuration: 0.4, animations: {
+            let size = self.view.frame.size.width * 7
+            let diffX = size - self.view.frame.size.width
+            let diffY = self.view.frame.size.height - size
+            self.splashImageView.frame = CGRect(
+                                                x: -(diffX) / 2,
+                                                y: diffY / 2,
+                                                width: size,
+                                                height: size
+                                            )
+        })
+        
+        UIView.animate(withDuration: 1.5, animations: {
+            self.splashImageView.alpha = 0
+            
+        })
+        
     }
 }

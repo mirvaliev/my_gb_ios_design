@@ -16,18 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Sun in VK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-dJ-sAt">
-                                <rect key="frame" x="66" y="422.5" width="282" height="51"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="50"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEw-Tc-Zpa">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VK.com-logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-EM-OwP">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="QPu-dc-3Ak"/>
+                                            <constraint firstAttribute="height" constant="200" id="psa-Yd-vVp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3jT-EM-OwP" firstAttribute="leading" secondItem="CEw-Tc-Zpa" secondAttribute="leading" id="1bd-3x-6s0"/>
+                                    <constraint firstAttribute="height" constant="200" id="CAN-l2-Rtj"/>
+                                    <constraint firstAttribute="width" constant="200" id="aWU-br-abd"/>
+                                    <constraint firstItem="3jT-EM-OwP" firstAttribute="top" secondItem="CEw-Tc-Zpa" secondAttribute="top" id="ciX-Tv-cW3"/>
+                                    <constraint firstAttribute="bottom" secondItem="3jT-EM-OwP" secondAttribute="bottom" id="tqX-Em-vJA"/>
+                                    <constraint firstAttribute="trailing" secondItem="3jT-EM-OwP" secondAttribute="trailing" id="xnZ-5I-b69"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="FYC-dJ-sAt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="48f-po-Pge"/>
-                            <constraint firstItem="FYC-dJ-sAt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7NJ-aw-Arb"/>
+                            <constraint firstItem="CEw-Tc-Zpa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ULi-wP-y45"/>
+                            <constraint firstItem="CEw-Tc-Zpa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="yWT-dE-5fm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,8 +52,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="VK.com-logo.svg" width="2048" height="2048"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

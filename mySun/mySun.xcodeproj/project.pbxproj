@@ -16,6 +16,7 @@
 		FAA4886226CAD97100546521 /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4886126CAD97100546521 /* GroupsModel.swift */; };
 		FAA4886426CADA5200546521 /* GroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4886326CADA5200546521 /* GroupData.swift */; };
 		FAAB41A626E0F6E800EEE71C /* AboutPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB41A526E0F6E800EEE71C /* AboutPhotoViewController.swift */; };
+		FAAB41B426E2C30600EEE71C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB41B326E2C30600EEE71C /* HomeViewController.swift */; };
 		FAB9F3A626D17B9E0038B9E9 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3A526D17B9E0038B9E9 /* ProfilesViewController.swift */; };
 		FAB9F3A826D2B0A00038B9E9 /* LogoAllGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3A726D2B0A00038B9E9 /* LogoAllGroups.swift */; };
 		FAB9F3AA26D2BA170038B9E9 /* LogoMyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9F3A926D2BA170038B9E9 /* LogoMyGroup.swift */; };
@@ -41,6 +42,7 @@
 		FAA4886126CAD97100546521 /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
 		FAA4886326CADA5200546521 /* GroupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupData.swift; sourceTree = "<group>"; };
 		FAAB41A526E0F6E800EEE71C /* AboutPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPhotoViewController.swift; sourceTree = "<group>"; };
+		FAAB41B326E2C30600EEE71C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FAB9F3A526D17B9E0038B9E9 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		FAB9F3A726D2B0A00038B9E9 /* LogoAllGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAllGroups.swift; sourceTree = "<group>"; };
 		FAB9F3A926D2BA170038B9E9 /* LogoMyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoMyGroup.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				FABE009226BE0ECF003E8F24 /* LoginForm.swift */,
+				FAAB41B326E2C30600EEE71C /* HomeViewController.swift */,
 			);
 			path = LoginForm;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				FA96574726C82B7A000C29EB /* AllGroupViewController.swift in Sources */,
 				FABE007D26BDB3CF003E8F24 /* SceneDelegate.swift in Sources */,
 				FA96574426C82AE3000C29EB /* MyGroupViewController.swift in Sources */,
+				FAAB41B426E2C30600EEE71C /* HomeViewController.swift in Sources */,
 				FAA4886226CAD97100546521 /* GroupsModel.swift in Sources */,
 				FAB9F3AC26DA27B30038B9E9 /* MyGroupCollectionViewController.swift in Sources */,
 				FAC8604426DA874E00B0B269 /* PhotoLikeViewController.swift in Sources */,

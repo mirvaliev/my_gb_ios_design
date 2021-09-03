@@ -47,17 +47,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-uZ-47q" userLabel="ConteynerViev">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="653"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VK.com-logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="oTk-v4-ALG">
-                                                <rect key="frame" x="140" y="120" width="134" height="128"/>
+                                                <rect key="frame" x="140" y="120" width="134" height="134"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="134" id="jcZ-va-cFc"/>
-                                                    <constraint firstAttribute="height" constant="128" id="sgp-aI-1iP"/>
+                                                    <constraint firstAttribute="height" constant="134" id="sgp-aI-1iP"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин или номер телефона" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-Ez-Oei" userLabel="LoginTF">
-                                                <rect key="frame" x="72" y="325" width="270" height="34"/>
+                                                <rect key="frame" x="72" y="331" width="270" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="3xy-EH-TU8"/>
                                                     <constraint firstAttribute="height" constant="34" id="oPL-Bv-Fhl"/>
@@ -66,12 +66,12 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AaT-MS-XbC" userLabel="HassTF">
-                                                <rect key="frame" x="72" y="392" width="270" height="34"/>
+                                                <rect key="frame" x="72" y="398" width="270" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cc-Rk-HQL" userLabel="Enter">
-                                                <rect key="frame" x="72" y="493" width="270" height="47"/>
+                                                <rect key="frame" x="72" y="499" width="270" height="47"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <state key="normal" title="Войти">
                                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -83,7 +83,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH6-Gf-d3w" userLabel="Registr">
-                                                <rect key="frame" x="72" y="565" width="270" height="42"/>
+                                                <rect key="frame" x="72" y="571" width="270" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="1r5-Bi-ITW"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="neP-FG-7gT"/>
@@ -145,6 +145,7 @@
                             <constraint firstItem="qHS-vz-QKb" firstAttribute="bottom" secondItem="3Dt-Tm-oxX" secondAttribute="bottom" id="z1h-ME-066"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ceg-QZ-am4"/>
                     <connections>
                         <outlet property="loginButton" destination="8Cc-Rk-HQL" id="XXr-Ao-YxE"/>
                         <outlet property="loginTextField" destination="sOn-Ez-Oei" id="lme-Ub-z6W"/>
@@ -342,7 +343,7 @@
         <!--My Group Collection View Controller-->
         <scene sceneID="S4J-g1-9Cv">
             <objects>
-                <collectionViewController id="MVy-Gx-WTY" customClass="MyGroupCollectionViewController" customModule="mySun" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="myGroupCollectionViewController" id="MVy-Gx-WTY" customClass="MyGroupCollectionViewController" customModule="mySun" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6St-FQ-hFC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,7 +491,7 @@
         <!--Мои группы-->
         <scene sceneID="zpP-eB-5mv">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LS6-st-9iT" customClass="MyGroupViewController" customModule="mySun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myGroupViewController" modalPresentationStyle="fullScreen" id="LS6-st-9iT" customClass="MyGroupViewController" customModule="mySun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLo-fc-Wji">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
