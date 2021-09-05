@@ -34,23 +34,23 @@ class MyGroupViewController: UIViewController {
         myGroupTableView.delegate = self
         myGroupTableView.dataSource = self
         myGroupArray = myGroupData.myGroup
-        
-        // настройка searchConroller
-        searchController.searchResultsUpdater = self // получателем информации об изменеени текстов в поисковой строке является наш класс
-        searchController.obscuresBackgroundDuringPresentation = false // что бы работь с поисковым контентом как с основным
-        searchController.searchBar.placeholder = "Поиск ..." // пользовательское название
-        
-        navigationItem.searchController = searchController // отображаем строку поиска на NavigationBar
-        definesPresentationContext = true // опускаем строку поиска при переходе на другой экран
-
+        filterMyGroup = myGroupData.myGroup
+        createSearchBarAndController()
+    }
+    
+    private func createSearchBarAndController() {
+        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController // отображаем стороку поиска на стореборд
+        searchController.searchBar.placeholder = "Все группы "
+        searchController.searchBar.setValue("Отмена", forKey: "cancelButtonText")
+        searchController.searchBar.setShowsCancelButton(true, animated: true)
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
     }
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToViewSelectionGroupSegue" {
-            if let indexPath = myGroupTableView.indexPathForSelectedRow {
-                let myGroups: GroupsModel
-                if isFiltging { myGroups = filterMyGroup[indexPath.row] } else { myGroups = myGroupArray[indexPath.row] }
-            }
             guard
                 let distanationVC = segue.destination as? MyGroupCollectionViewController,
                 let indexAllGroupCell = myGroupTableView.indexPathForSelectedRow?.row
@@ -74,12 +74,21 @@ class MyGroupViewController: UIViewController {
         
         //получаем название группы из массива всех групп
         let groups = sourseController.allGroupArray[indexSelectionCell.row]
+        let searchGroup = sourseController.filterAllGroup[indexSelectionCell.row]
                 
         // проверяем если группа не содержиться то добавляем
         // В этом замыкании вы сравнивате имя одной группы с именем другой группы. в $0 поочереди приходят группы из вашего массива в контроллере Мои группы у которых затем отбираются имена , а первое значение groups.groupName мы получили из контроллера со всеми группами.
-        if !myGroupArray.contains(where: { groups.groupName == $0.groupName }) {
-            myGroupArray.append(groups)
+        if isFiltging {
+            if !filterMyGroup.contains(where: { groups.groupName == $0.groupName }) {
+                myGroupArray.append(searchGroup)
+            }
+        } else {
+            if !myGroupArray.contains(where: { groups.groupName == $0.groupName }) {
+                myGroupArray.append(groups)
+            }
         }
+        
+        
                 
         // После того как добавили то надо перезагрузить таблицу
         myGroupTableView.reloadData()
@@ -93,13 +102,8 @@ extension MyGroupViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // активация строки поиска
-        var myGroup: GroupsModel
-        
-        if isFiltging { myGroup = filterMyGroup[indexPath.row] } else { myGroup = myGroupArray[indexPath.row] }
-        
         let myGroupCell = tableView.dequeueReusableCell(withIdentifier: MyGroupTableViewCell.indetifarMyGroup) as! MyGroupTableViewCell
-        myGroupCell.configureMyGroup(groups: myGroupArray[indexPath.row])
+        if isFiltging { myGroupCell.configureMyGroup(groups: filterMyGroup[indexPath.row]) } else { myGroupCell.configureMyGroup(groups: myGroupArray[indexPath.row]) }
         return myGroupCell
     }
         
@@ -126,7 +130,7 @@ extension MyGroupViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension MyGroupViewController: UISearchResultsUpdating {
+extension MyGroupViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchText: searchController.searchBar.text!)
     }

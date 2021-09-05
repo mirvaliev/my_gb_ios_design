@@ -29,6 +29,7 @@
 		FABE008726BDB3D0003E8F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABE008526BDB3D0003E8F24 /* LaunchScreen.storyboard */; };
 		FABE009326BE0ECF003E8F24 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE009226BE0ECF003E8F24 /* LoginForm.swift */; };
 		FAC8604426DA874E00B0B269 /* PhotoLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8604326DA874E00B0B269 /* PhotoLikeViewController.swift */; };
+		FAF4686726E347AA00993EF3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4686626E347AA00993EF3 /* ResultViewController.swift */; };
 		FAF8199626CD853100B5F183 /* MyGroupCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		FABE008826BDB3D0003E8F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABE009226BE0ECF003E8F24 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		FAC8604326DA874E00B0B269 /* PhotoLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLikeViewController.swift; sourceTree = "<group>"; };
+		FAF4686626E347AA00993EF3 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FAF8199526CD853100B5F183 /* MyGroupCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 			children = (
 				FA96574626C82B7A000C29EB /* AllGroupViewController.swift */,
 				FA96575026C8D1F4000C29EB /* AllGroupCollectionViewController.swift */,
+				FAF4686626E347AA00993EF3 /* ResultViewController.swift */,
 			);
 			path = Conroller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				FAB9F3AA26D2BA170038B9E9 /* LogoMyGroup.swift in Sources */,
 				FA934D0E26CC16CF000B75C3 /* GroupPhotoColection.swift in Sources */,
+				FAF4686726E347AA00993EF3 /* ResultViewController.swift in Sources */,
 				FAB9F3A826D2B0A00038B9E9 /* LogoAllGroups.swift in Sources */,
 				FAB9F3A626D17B9E0038B9E9 /* ProfilesViewController.swift in Sources */,
 				FABE007F26BDB3CF003E8F24 /* ViewController.swift in Sources */,

@@ -15,18 +15,16 @@ class AllGroupViewController: UIViewController {
     var allGroupArray: [GroupsModel] = []
     private var filterAllGroup: [GroupsModel] = []
     
+    private let searchAllController = UISearchController(searchResultsController: nil) // создаем экземпляр класса поиск
+    
     private var searchBarIsEmpty: Bool {
-        guard let searchText = searchController.searchBar.text else { return false }
-        return searchText.isEmpty
+        guard let text = searchAllController.searchBar.text else { return false }
+        return text.isEmpty
     }
     
-    private var isFiltging: Bool {
-        return searchController.isActive && !searchBarIsEmpty
+    private var isFiltring: Bool {
+        return searchAllController.isActive && !searchBarIsEmpty
     }
-    
-    // отображать результат поиска в том же View что и основной контент
-    private let searchController = UISearchController(searchResultsController: nil)
-    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,60 +32,70 @@ class AllGroupViewController: UIViewController {
         allGroupTableView.delegate = self
         allGroupTableView.dataSource = self
         allGroupArray = allGroupData.allGroup
+        filterAllGroup = allGroupData.allGroup
+        createSearchBarAndController()
         
-        // настройка searchConroller
-        searchController.searchResultsUpdater = self // получателем информации об изменеени текстов в поисковой строке является наш класс
-        searchController.obscuresBackgroundDuringPresentation = false // что бы работь с поисковым контентом как с основным
-        searchController.searchBar.placeholder = "Поиск ..." // пользовательское название
-        
-        navigationItem.searchController = searchController // отображаем строку поиска на NavigationBar
-        definesPresentationContext = true // опускаем строку поиска при переходе на другой экран
+    }
+    
+    private func createSearchBarAndController() {
+        searchAllController.searchBar.delegate = self
+        searchAllController.searchResultsUpdater = self
+        navigationItem.searchController = searchAllController // отображаем стороку поиска на стореборд
+        searchAllController.searchBar.placeholder = "Все группы "
+        searchAllController.searchBar.showsCancelButton =  true
+        searchAllController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
     }
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "goToViewSelectionGroupSegue" {
-            if let indexPath = allGroupTableView.indexPathForSelectedRow {
-                let allGroups: GroupsModel
-                if isFiltging { allGroups = filterAllGroup[indexPath.row] } else { allGroups = allGroupArray[indexPath.row] }
-            }
-            
             let distanationVC = segue.destination
-            guard let indexAllGroupCell = allGroupTableView.indexPathForSelectedRow?.row else { return }
-            distanationVC.title = allGroupArray[indexAllGroupCell].groupName
+            guard
+                let indexAllGroupCell = allGroupTableView.indexPathForSelectedRow?.row,
+                let indexFilterAllGroupCell = allGroupTableView.indexPathForSelectedRow?.row
+            else { return }
+            if isFiltring {
+                distanationVC.title = filterAllGroup[indexFilterAllGroupCell].groupName
+            } else {
+                distanationVC.title = allGroupArray[indexAllGroupCell].groupName
+            }
         }
     }
 }
 
 extension AllGroupViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltging { return filterAllGroup.count } else { return allGroupArray.count }
+        if isFiltring { return filterAllGroup.count } else { return allGroupArray.count }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // активация строки поиска
-        let allGroup: GroupsModel
-        
-        if isFiltging { allGroup = filterAllGroup[indexPath.row] } else { allGroup = allGroupArray[indexPath.row] }
-        
         let allGroupCell = tableView.dequeueReusableCell(withIdentifier: AllGroupTableViewCell.indetifarAllGroup) as! AllGroupTableViewCell
         
-        allGroupCell.configureAllGroup(groups: allGroupArray[indexPath.row])
+        if isFiltring { allGroupCell.configureAllGroup(groups:  filterAllGroup[indexPath.row]) }
+        else { allGroupCell.configureAllGroup(groups: allGroupArray[indexPath.row]) }
+        
         return allGroupCell
     }
+    
 }
 
-extension AllGroupViewController: UISearchResultsUpdating {
-    
+extension AllGroupViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchText: searchController.searchBar.text!)
+        filterAllGroup(searchT: searchController.searchBar.text!)
     }
-    // испрааавить для поиска
-    private func filterContentForSearchText (searchText: String) {
-        filterAllGroup = allGroupArray.filter({ (filer: GroupsModel) -> Bool in
-            return filer.groupName.lowercased().contains(searchText.lowercased())
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        
+    }
+    
+    private func filterAllGroup (searchT: String) {
+        filterAllGroup = allGroupArray.filter({ (groupModel: GroupsModel) -> Bool in
+            return groupModel.groupName.lowercased().contains(searchT.lowercased())
+            
         })
-        print(filterAllGroup)
         allGroupTableView.reloadData()
     }
 }
+    
